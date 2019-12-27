@@ -16,7 +16,7 @@
         <div class="resultKeyword" v-if="searchKeyHead">Results for <strong>{{ searchKeyHead }}</strong></div>
         <div class="photos" v-if="photos">
           <nuxt-link v-for="(photo, index) in photos" :key="photo.id" class="imgs" :to="{ name: 'photoDetail-id', params: { id : photo.id } }">
-            <img :title="photo.description" :src="photo.urls.thumb">
+            <img :title="photo.description" :src="photo.urls.regular">
           </nuxt-link>
           <a href="javascript:;" class="showMore" v-if="randomRefreshBtn" @click="randomRefresh()">Show me new photos</a>
           <a href="javascript:;" class="showMore" v-if="searchNextBtn" @click="getSearch()">Show me new photos</a>
@@ -40,7 +40,7 @@ export default {
     }
   },
   async asyncData(context) {
-    let photos = await axios({
+    let response = await axios({
       method: 'get',
       url: process.env.baseURL + 'photos/random?client_id=' + process.env.clientID + '&count=30'
     }).catch(error => {
@@ -48,7 +48,7 @@ export default {
     });
     return {
       loading: false,
-      photos: photos.data
+      photos: response.data
     }
   },
   methods: {

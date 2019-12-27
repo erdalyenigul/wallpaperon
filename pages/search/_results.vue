@@ -15,7 +15,7 @@
         <div class="resultKeyword" v-if="searchKeyHead">Results for <strong>{{ searchKeyHead }}</strong></div>
         <div class="photos">
           <nuxt-link v-for="(photo, index) in photos" :key="photo.id" class="imgs" :to="{ name: 'photoDetail-id', params: { id : photo.id } }">
-            <img :title="photo.description" :src="photo.urls.thumb">
+            <img :title="photo.description" :src="photo.urls.small">
           </nuxt-link>
           <a href="javascript:;" class="showMore" v-if="moreCagetoryBtn" @click="getMoreCagetory()">Show me new photos</a>
           <a href="javascript:;" class="showMore" v-if="moreSearchBtn" @click="getSearch()">Show me new photos</a>
