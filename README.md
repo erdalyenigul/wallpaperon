@@ -2,6 +2,10 @@
 
 > Wallpaper project with NuxtJs
 
+# Demo
+
+> https://wallpaperon.appspot.com/
+
 ## Build Setup
 
 ``` bash
