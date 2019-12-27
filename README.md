@@ -1,6 +1,6 @@
-# curreix
+# wallpaper
 
-> Live Currency
+> Wallpaper project with NuxtJs
 
 ## Build Setup
 
