@@ -3,10 +3,10 @@ import Router from 'vue-router'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _4368a947 = () => interopDefault(import('../pages/categories/_category.vue' /* webpackChunkName: "pages/categories/_category" */))
-const _100741c1 = () => interopDefault(import('../pages/photoDetail/_id.vue' /* webpackChunkName: "pages/photoDetail/_id" */))
-const _354d2b9e = () => interopDefault(import('../pages/search/_results.vue' /* webpackChunkName: "pages/search/_results" */))
-const _4f815385 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _4f69fc44 = () => interopDefault(import('../pages/categories/_category.vue' /* webpackChunkName: "pages/categories/_category" */))
+const _689344a4 = () => interopDefault(import('../pages/photoDetail/_id.vue' /* webpackChunkName: "pages/photoDetail/_id" */))
+const _3de56d14 = () => interopDefault(import('../pages/search/_results.vue' /* webpackChunkName: "pages/search/_results" */))
+const _13260628 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 Vue.use(Router)
 
@@ -19,19 +19,19 @@ export const routerOptions = {
 
   routes: [{
     path: "/categories/:category?",
-    component: _4368a947,
+    component: _4f69fc44,
     name: "categories-category"
   }, {
     path: "/photoDetail/:id?",
-    component: _100741c1,
+    component: _689344a4,
     name: "photoDetail-id"
   }, {
     path: "/search/:results?",
-    component: _354d2b9e,
+    component: _3de56d14,
     name: "search-results"
   }, {
     path: "/",
-    component: _4f815385,
+    component: _13260628,
     name: "index"
   }],
 

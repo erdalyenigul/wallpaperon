@@ -5,12 +5,9 @@ strong{font-weight: 600;}
 body{font-family: 'Nunito', sans-serif;}
 
 .container{float:left; width:100%;
-	.content{max-width:1024px; margin:0 auto;
+	.content{max-width:1024px; margin:0 auto; margin-top:60px;
 		.middle{float:left; width:100%; padding:30px;
-			.search{float: left; width:100%; margin-bottom: 20px; position:relative;;
-				input{float:left; width: 100%; border: 1px solid #ccc; padding:15px; font-size: 16px; outline:0; height:50px;}
-				.searchBtn{position: absolute; top:0; right:0; height:50px; display: flex; align-items: center; justify-content: center; color:#fff; background-color: #222; text-decoration: none; padding: 10px 20px;}
-			}
+			
 			.photos{float:left; width:100%; columns: 4; column-gap:20px;
 				.imgs{float:left; width:100%; height: auto;  padding-bottom:20px; overflow: hidden; cursor: pointer;
 					img{width: 100%;}
@@ -40,7 +37,12 @@ body{font-family: 'Nunito', sans-serif;}
 		}
 	}
 }
-.header{display:flex; align-items: center; justify-content: space-between; width:100%; background-color: #563d7c; color:#fff; padding:20px; position:relative; height: 60px;
+.headSearchWrap{float: left; width: 70%; margin-bottom: 20px;}
+.search{float: left; width:100%; margin-bottom: 20px; position:relative;;
+	input{float:left; width: 100%; border: 1px solid #ccc; padding:15px; font-size: 16px; outline:0; height:50px;}
+	.searchBtn{position: absolute; top:0; right:0; height:50px; display: flex; align-items: center; justify-content: center; color:#fff; background-color: #222; text-decoration: none; padding: 10px 20px;}
+}
+.header{position:fixed; top:0; right:0; left:0; display:flex; align-items: center; justify-content: space-between; width:100%; background-color: #563d7c; color:#fff; padding:20px; height: 60px; z-index:10;
 	.logo{display: flex; align-items: center; justify-content: center; flex-direction: row; font-weight: 700; color:#fff;
 		img{width:40px;}
 		span{margin-left:20px; font-size: 24px;}
@@ -198,5 +200,6 @@ body{font-family: 'Nunito', sans-serif;}
 	.container .content .middle .photoDetail .description{flex-direction: column;}
 	.container .content .middle .photoDetail .description .text{margin-bottom: 20px;}
 	.container .content .middle .photoDetail .description .download{width: 100%; text-align: center;}
+	.headSearchWrap{width:100%; padding:0 20px;}
 }
 

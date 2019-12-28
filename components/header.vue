@@ -15,6 +15,12 @@
       </div>
     </div>
     <div class="menu" v-if="showMenu">
+      <div class="headSearchWrap">      
+        <div class="search">
+          <input @keyup.enter="getSearch" type="text" v-model="searchKey" placeholder="Search...">
+          <a href="javascript:;" @click="getSearch" class="searchBtn">Search</a>
+        </div>
+      </div>
       <div class="head">Categories</div>
       <ul class="list">
         <li v-for="(category, index) in categories" @click="menuBtn">
@@ -29,6 +35,7 @@ export default {
   data() {
     return {
       showMenu: false,
+      searchKey: '',
       categories: [{
           name: 'Animals',
         },
@@ -119,7 +126,11 @@ export default {
   methods: {
     menuBtn() {
       this.showMenu = !this.showMenu;
-    }
+    },
+    getSearch() {
+      this.showMenu = !this.showMenu;
+      this.$router.push( { name: 'search-results', params: { results: this.searchKey } } );
+    },
   },
   watch: {
     showMenu() {
