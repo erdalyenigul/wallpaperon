@@ -4,6 +4,13 @@ export default {
   /*
   ** Headers of the page
   */
+  // generate: {
+  //   routes: [
+  //     '/categories/_category',
+  //     '/photoDetail/_id',
+  //     '/search/_results',
+  //   ]
+  // },
   head: {
     // title: process.env.npm_package_name || '',
     title: 'Wallpapers',
@@ -67,7 +74,5 @@ export default {
     extend (config, ctx) {
     }
   },
-  generate: {
-    fallback: true
-  }
+
 }
