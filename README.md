@@ -1,6 +1,6 @@
-# wallpaper
+# wallpaper project
 
-> Wallpaper project with NuxtJs
+> Wallpaper project with NuxtJs and google app engine
 
 # Demo
 
